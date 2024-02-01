@@ -7,6 +7,8 @@ TagManager:
   - Head
   - Flame
   - Raycasts
+  - Trail
+  - Saved Trail
   layers:
   - Default
   - TransparentFX
