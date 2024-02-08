@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class PrintTrail : MonoBehaviour
@@ -11,22 +12,43 @@ public class PrintTrail : MonoBehaviour
     void Start()
     {
         creator = GetComponent<CreateTrail>();
-        creator.trailPrefab.GetComponent<TrailRenderer>().material = null;
+        Color color = Color.white;
+        color.a = 0.0f;
+        creator.trailPrefab.GetComponent<TrailRenderer>().startColor = color;
+        creator.trailPrefab.GetComponent <TrailRenderer>().endColor = color;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.localPosition = (paintbrush.position - Vector3.forward * 0.5f + Vector3.right * 1.5f) * 0.25f;
+        transform.localPosition = (paintbrush.position - Vector3.forward * 0.5f) * 0.25f;
+        GameObject[] currentPrint = GameObject.FindGameObjectsWithTag("Saved Trail");
+        foreach (GameObject go in currentPrint)
+        {
+            Color color = Color.white;
+            color.a = 0.0f;
+            go.GetComponent<TrailRenderer>().endColor = color;
+            go.GetComponent<TrailRenderer>().startColor = color;
+            //go.GetComponent<TrailRenderer>().materials = Material[0];
+        }
     }
 
     public void Print()
     {
-        creator.trailPrefab.GetComponent<TrailRenderer>().material = trailMaterial;
-    }
+        GameObject[] previousPrint = GameObject.FindGameObjectsWithTag("Previous Saved Trail");
+        foreach (GameObject go in previousPrint)
+        {
+            Destroy(go);
+        }
 
-    public void ClearTrailMat()
-    {
-        creator.trailPrefab.GetComponent<TrailRenderer>().material = null;
+        GameObject[] currentPrint = GameObject.FindGameObjectsWithTag("Saved Trail");
+        foreach(GameObject go in currentPrint)
+        {
+            Color color = Color.white;
+            color.a = 1.0f;
+            go.GetComponent<TrailRenderer>().endColor = color;
+            go.GetComponent<TrailRenderer>().startColor = color;
+            go.tag = "Previous Saved Trail";
+        }
     }
 }

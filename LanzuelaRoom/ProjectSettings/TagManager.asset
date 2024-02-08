@@ -9,6 +9,7 @@ TagManager:
   - Raycasts
   - Trail
   - Saved Trail
+  - Previous Saved Trail
   layers:
   - Default
   - TransparentFX
