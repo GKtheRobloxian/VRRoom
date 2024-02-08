@@ -2928,7 +2928,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764697670}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4793,7 +4793,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Print Painting
+  m_text: Clear Duplicate
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5530,7 +5530,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '   Print'
+  m_text: '   Clear'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7417,6 +7417,7 @@ MonoBehaviour:
   trailPrefab: {fileID: 7631491353434788432, guid: 52798fbb50b9a664c806107f9618f683,
     type: 3}
   width: 0.05
+  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1786976029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10057,6 +10058,7 @@ MonoBehaviour:
   trailPrefab: {fileID: 7631491353434788432, guid: 594d006ac61ca0d4db9a3c2f2cba7eb8,
     type: 3}
   width: 0.05
+  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!82 &7785142639058902458
 AudioSource:
   m_ObjectHideFlags: 0

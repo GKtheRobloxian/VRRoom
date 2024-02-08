@@ -9,7 +9,7 @@ public class CreateTrail : MonoBehaviour
     public GameObject trailPrefab = null;
 
     public float width = 0.05f;
-    private Color color = Color.white;
+    public Color color = Color.white;
 
     private GameObject currentTrail = null;
 
