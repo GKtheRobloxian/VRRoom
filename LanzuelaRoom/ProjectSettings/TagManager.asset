@@ -10,6 +10,8 @@ TagManager:
   - Trail
   - Saved Trail
   - Previous Saved Trail
+  - Box
+  - Subtitle
   layers:
   - Default
   - TransparentFX
